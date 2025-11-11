@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estructura de Datos - Sílabo</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f7;
+    margin: 0;
+  }
+  header {
+    background: #004d99;
+    color: white;
+    text-align: center;
+    padding: 1em;
+  }
+  nav {
+    background: #0066cc;
+    display: flex;
+    justify-content: center;
+  }
+  nav button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 1em 2em;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  nav button:hover {
+    background: #004080;
+  }
+  section {
+    display: none;
+    padding: 2em;
+    background: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .active {
+    display: block;
+  }
+  h2 {
+    color: #004d99;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Asignatura: Estructura de Datos</h1>
+  <p>Periodo Académico: 15 septiembre 2025 - 13 febrero 2026</p>
+</header>
+
+<nav>
+  <button onclick="mostrar('unidad1')">Unidad 1</button>
+  <button onclick="mostrar('unidad2')">Unidad 2</button>
+  <button onclick="mostrar('unidad3')">Unidad 3</button>
+  <button onclick="mostrar('unidad4')">Unidad 4</button>
+</nav>
+
+<section id="unidad1" class="active">
+  <h2>Unidad 1: Fundamentos e Introducción a las Estructuras de Datos</h2>
+  <ul>
+    <li><b>1:</b> Introducción (Historia, Características, Ventajas y Desventajas)</li>
+    <li><b>2:</b> Tipos de Datos (Primitivos, Compuestos, Agregados y Abstractos)</li>
+    <li><b>3:</b> Datos Compuestos (Vectores, Matrices, Registros)</li>
+    <li><b>4:</b> Fundamentos de Algoritmia (Concepto, Representación, Ciencias de la Computación)</li>
+  </ul>
+</section>
+
+<section id="unidad2">
+  <h2>Unidad 2: Estructuras de Datos Lineales</h2>
+  <ul>
+    <li><b>1:</b> Pilas (Definición, Representación, Operaciones, Aplicaciones)</li>
+    <li><b>2:</b> Colas (Tipos, Operaciones, Aplicaciones)</li>
+    <li><b>3:</b> Listas (Nodos, Tipos, Operaciones, Aplicaciones)</li>
+  </ul>
+</section>
+
+<section id="unidad3">
+  <h2>Unidad 3: Estructuras de Datos No Lineales</h2>
+  <ul>
+    <li><b>1:</b> Visualización de Algoritmos</li>
+    <li><b>2:</b> Árboles (Definición, Representación, Recorridos, Métodos)</li>
+    <li><b>3:</b> Grafos (Definición, Tipos, Propiedades)</li>
+  </ul>
+</section>
+
+<section id="unidad4">
+  <h2>Unidad 4: Búsqueda y Ordenamiento</h2>
+  <ul>
+    <li><b>1:</b> Análisis de algoritmos (Complejidad temporal y espacial)</li>
+    <li><b>2:</b> Ordenamientos: Burbuja, Quicksort, Mergesort</li>
+    <li><b>3:</b> Búsquedas: Secuencial, Binaria, Hash</li>
+  </ul>
+</section>
+
+<script>
+  function mostrar(id) {
+    document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
